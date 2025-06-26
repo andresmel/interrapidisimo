@@ -1,0 +1,57 @@
+
+##########################
+# ANGULAR - Subcarpeta: web-app/
+##########################
+
+web-app/node_modules/
+web-app/dist/
+web-app/.angular/
+web-app/.env
+web-app/.env.*
+web-app/.vscode/
+web-app/.DS_Store
+web-app/*.log
+web-app/package-lock.json
+web-app/yarn.lock
+web-app/pnpm-lock.yaml
+web-app/.idea/
+web-app/tmp/
+web-app/.output/
+
+##########################
+# .NET / Visual Studio - Subcarpeta: web-api/
+##########################
+
+web-api/.vs/
+web-api/*.user
+web-api/*.suo
+web-api/*.userosscache
+web-api/*.sln.docstates
+web-api/*.csproj.user
+
+# Build outputs
+web-api/bin/
+web-api/obj/
+web-api/wwwroot/
+web-api/Generated_Code/
+
+# NuGet
+web-api/packages/
+web-api/*.nupkg
+web-api/*.snupkg
+web-api/project.lock.json
+web-api/project.fragment.lock.json
+web-api/*.nuspec
+
+# Rider
+web-api/.idea/
+
+# VS Code
+web-api/.vscode/
+
+# Databases / temp
+web-api/*.db
+web-api/*.sqlite
+web-api/*.sqlite3
+web-api/*.bak
+web-api/*.tmp
