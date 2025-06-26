@@ -93,7 +93,7 @@ namespace universidad.Controllers
                     api.status = 401;
                     api.data = null;
                     api.mensaje = "error en Usuario o contrasena";
-                    return Unauthorized(api);
+                    return StatusCode(401, api);
                 }
             }
             catch (EstudianteException ex)

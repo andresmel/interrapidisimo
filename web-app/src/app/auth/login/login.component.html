@@ -1,0 +1,11 @@
+<div class="login-page">
+  <div class="form">
+     <form class="login-form" [formGroup]="formData" (ngSubmit)="login()">
+      <input type="text" placeholder="username" formControlName="email" />
+      <input type="password" placeholder="password" formControlName="password" />
+      <button type="submit">login</button>
+      <p class="message">Not registered? <a href="register">Create an account</a></p>
+    </form>
+  </div>
+</div>
+

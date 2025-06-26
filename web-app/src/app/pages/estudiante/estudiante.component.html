@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="nav-content">
+       <h1>Informacion Del Estudiante</h1> 
+    </div>
+
+    <div class="containerTable">
+        <div class="title">
+           <h3>Mis Clases</h3>
+        </div>
+        @if(clases().length > 0) {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Estudiante</th>
+                        <th>Materia</th>
+                        <th>Profesor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (clase of clases();track clase.idClase) {
+                        <tr>
+                            <td>{{ clase.idClase }}</td>
+                            <td>{{ clase.estudiante }}</td>
+                            <td>{{ clase.materia }}</td>
+                            <td>{{ clase.profesor }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        }@else {
+            <div class="no-data">
+                <p class="red">No hay clases registradas.</p>
+            </div>
+        }
+    </div>  
+
+    
+
+</div>

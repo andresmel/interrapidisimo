@@ -1,0 +1,21 @@
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Interrapidisimo</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#!">Usuario : {{usuario()?.nombre}}</a>
+        </li>
+        <li>
+          <a href="#!">Email : {{usuario()?.email}}</a>
+        </li>
+         
+    </ul>
+    <li><button class="btn btn-primary" (click)="logout()">Cerrar Sesion</button></li>
+    </nav>
+  </div>
+</section>
+

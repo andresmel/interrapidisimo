@@ -60,7 +60,7 @@ namespace universidad.Controllers
         }
 
 
-        [HttpPost("getClases")]
+        [HttpGet("getClases")]
         public async Task<IActionResult> GetClases(int id)
         {
             if (id == 0 )
@@ -72,20 +72,19 @@ namespace universidad.Controllers
             try
             {
                 var result = await _claseService.GetClasesById(id);
-                if (result!=null)
+                if (result.Count()>0)
                 {
                     api.status = 200;
                     api.data = result;
                     api.mensaje = "Clases Inscritas";
-                    return Ok(api);
                 }
                 else
                 {
-                    api.status = 400;
+                    api.status = 200;
                     api.data = null;
                     api.mensaje = "No hay clase inscrita";
-                    return BadRequest(api);
                 }
+                return Ok(api);
             }
             catch (ClasesException ex)
             {
