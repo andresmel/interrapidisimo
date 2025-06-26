@@ -21,6 +21,8 @@ builder.Services.AddScoped<IMateriaProfesorRepository, MateriasProfesorRepositor
 builder.Services.AddScoped<IMateriaProfesorService, MateriasProfesorService>();
 builder.Services.AddScoped<IEstudianteRepository, EstudianteRepository>();
 builder.Services.AddScoped<IEstudianteService, EstudianteService>();
+builder.Services.AddScoped<IClaseRepository, ClaseRepository>();
+builder.Services.AddScoped<IClaseService, ClaseService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
