@@ -16,10 +16,17 @@ export class HeaderComponent {
   private _route=inject(Router);
   usuario = usuario;
   auth= authStore; // Acceso al store de autenticación
-  constructor() {}
+  constructor() {
+
+  }
 
 
    logEffect = effect(() => {
+    if(this.usuario() === null) {
+        this._route.navigate(['/login']);
+      return;
+    }
+      console.log('No hay usuario autenticado');
     console.log('Usuario actualizado en header:', this.usuario());
   });
 

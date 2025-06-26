@@ -18,7 +18,7 @@ namespace universidad.Controllers
             this._imateriaProfesorService = imateriaProfesorService;
         }
 
-        [HttpGet("MateriaProfesores")]
+        [HttpGet("materiaProfesores")]
         public async Task<IActionResult> GetMateriasProfesores()
         {
             responseApi api = new responseApi();

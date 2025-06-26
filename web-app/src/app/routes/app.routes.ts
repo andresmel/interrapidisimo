@@ -7,7 +7,7 @@ export const routes: Routes = [
     {path: 'dashboard', loadComponent: () => import('../layouts/layout-private/layout-private.component').then(m => m.LayoutPrivateComponent),children: [
         {path: '', redirectTo: 'estudiante', pathMatch: 'full' },
         {path: 'estudiante', loadComponent: () => import('../pages/estudiante/estudiante.component').then(m => m.EstudianteComponent) },
-        {path: 'materia', loadComponent: () => import('../pages/materias/materias.component').then(m => m.MateriasComponent) },
+        {path: 'materias', loadComponent: () => import('../pages/materias/materias.component').then(m => m.MateriasComponent) },
     ]},
     
     {path: 'dashAdmin', loadComponent: () => import('../layouts/layout-admin/layout-admin.component').then(m => m.LayoutAdminComponent) },

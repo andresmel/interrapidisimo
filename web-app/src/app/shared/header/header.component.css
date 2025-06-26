@@ -167,4 +167,7 @@ article {
     right: 2px;
     background-color: black;
     color: white;
+    top:17px;
+    outline: none;
+    border: none;
 }

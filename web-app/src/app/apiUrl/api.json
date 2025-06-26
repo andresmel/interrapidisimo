@@ -3,5 +3,6 @@
     "loginUrl": "PostEstudianteLogin",
     "registerUrl": "PostEstudiantes",
     "clasesUrl": "getClases",
-    "postClaseUrl": "postClase"
+    "postClaseUrl": "postClase",
+    "getMateriasUrl": "MateriaProfesores"
 }
