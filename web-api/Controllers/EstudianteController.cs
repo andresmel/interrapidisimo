@@ -81,7 +81,7 @@ namespace universidad.Controllers
                 }
 
                 var result = await this._iestudianteService.PostLogin(estudiante);
-                if (result!=null)
+                if (result != null)
                 {
                     api.status = 200;
                     api.data = result;
@@ -93,9 +93,8 @@ namespace universidad.Controllers
                     api.status = 401;
                     api.data = null;
                     api.mensaje = "error en Usuario o contrasena";
-                    return Unauthorized(api); // 401 Unauthorized
+                    return Unauthorized(api);
                 }
-        
             }
             catch (EstudianteException ex)
             {
