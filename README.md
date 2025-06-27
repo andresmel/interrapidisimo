@@ -14,7 +14,7 @@ node 22.12.0,
 Boostrap CDN,
 
 
-#configuracion
+# Configuracion
 
  Clonar el repositorio del proyecto
  https://github.com/andresmel/interrapidisimo
@@ -28,7 +28,7 @@ Boostrap CDN,
   "universidad": "server=localhost;database=universidad;user=root;password="
 }
 
-#arquitectura
+# Arquitectura
 El proyecto fue creado con una arquitectura de capas. esta integrada con interfazes para separar responsabilidades y definir contratos, metodos que deben utilizarse y sus parametros,
 permite cambiar la implementacion sin afectar controllers services y/o repositories
 
@@ -37,7 +37,7 @@ Ayuda en la practica de testing  y mockear las interfaces
 escalabilidad y mantenibilidad
 
 
-#autor 
+# Aautor 
 Andres Melo
 
 
