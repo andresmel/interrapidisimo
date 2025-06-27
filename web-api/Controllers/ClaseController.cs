@@ -39,7 +39,7 @@ namespace universidad.Controllers
                 {
                     api.status = 400;
                     api.data = null;
-                    api.mensaje = "El estudiante ya tiene 3 clases asignadas";
+                    api.mensaje = "El estudiante ya tiene 3 clases asignadas o se repitio profesor";
                     return BadRequest(api);
                 }
             }

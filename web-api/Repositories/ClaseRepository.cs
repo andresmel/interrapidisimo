@@ -17,11 +17,37 @@ namespace universidad.Repositories
         public async Task<bool> PostClase(Clase clase)
         {
 
+        
+            var materiaProfesor = await _universidadcontext.MateriasProfesores
+                .FirstOrDefaultAsync(mp => mp.Id == clase.IdMateriasProfesores);
+
+            if (materiaProfesor == null)
+            {
+                return false; 
+            }
+
+            var idProfesorNuevo = materiaProfesor.IdProfesor;
+
+            
+            var yaTieneConEseProfesor = await (
+                from c in _universidadcontext.Clases
+                join mp in _universidadcontext.MateriasProfesores
+                    on c.IdMateriasProfesores equals mp.Id
+                where c.IdEstudiante == clase.IdEstudiante && mp.IdProfesor == idProfesorNuevo
+                select c
+            ).AnyAsync();
+
+            if (yaTieneConEseProfesor)
+            {
+                return false;
+            }
+
             var res = await _universidadcontext.Clases.CountAsync(c => c.IdEstudiante == clase.IdEstudiante);
             if (res >= 3)
             {
                 return false;
             }
+           
             await _universidadcontext.Clases.AddAsync(clase);
             return await _universidadcontext.SaveChangesAsync() > 0;
         }

@@ -66,6 +66,7 @@
   padding: 20px;
   overflow-y: hidden;
   padding-bottom: 40px;
+  cursor: auto;
 }
 
 .main-content .container-estudiantes-clases .list{
