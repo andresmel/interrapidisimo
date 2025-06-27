@@ -1,0 +1,25 @@
+<div class="main-content">
+  <div class="nav-content">
+    <h2>Inscripcion de Materias</h2>
+  </div>
+
+
+  <div class="container">
+    <h1 class="title">Form Registro</h1>
+    <br />
+    <br />
+    <div class="card">
+      <form [formGroup]="formData" (ngSubmit)="postMateria()">
+      <label for="pass">Seleccione materia</label>
+      <select class="form-select" formControlName="idMateriasProfesores">
+        <option value="" disabled>Seleccione Materia</option>
+        <option *ngFor="let m of materias()" [value]="m.id">asignatura : {{ m.materia }} - profesor : {{m.profesor}}
+        </option>
+      </select>
+      <Button type="submit" class="btn">Inscribir</Button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="triangulo2"></div>

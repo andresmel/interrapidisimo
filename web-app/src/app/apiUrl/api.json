@@ -1,0 +1,10 @@
+{
+    "apiUrl": "https://localhost:7182/api/",
+    "loginUrl": "PostEstudianteLogin",
+    "registerUrl": "PostEstudiantes",
+    "clasesUrl": "getClases",
+    "postClaseUrl": "postClase",
+    "getMateriasUrl": "MateriaProfesores",
+    "getCLasesEstudiantesUrl":"getCLasesEstudiantes",
+    "getEstudiantesByClaseUrl":"getEstudiantesByClase"
+}

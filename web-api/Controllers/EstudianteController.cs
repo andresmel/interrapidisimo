@@ -30,7 +30,7 @@ namespace universidad.Controllers
                     api.status = 400;
                     api.data = null;
                     api.mensaje = "El estudiante no puede ser nulo";
-                    return BadRequest(api);
+                    return StatusCode(400,api);
                 }
 
                 var result = await this._iestudianteService.PostEstudiantes(estudiante);
@@ -55,7 +55,7 @@ namespace universidad.Controllers
                 api.status = 400;
                 api.data = null;
                 api.mensaje = "error en la solicitud" + ex.Message;
-                return BadRequest(api);
+                return StatusCode(400, api);
             }
             catch (Exception ex)
             {
@@ -77,11 +77,11 @@ namespace universidad.Controllers
                     api.status = 400;
                     api.data = null;
                     api.mensaje = "El estudiante no puede ser nulo";
-                    return BadRequest(api);
+                    return StatusCode(400, api);
                 }
 
                 var result = await this._iestudianteService.PostLogin(estudiante);
-                if (result!=null)
+                if (result != null)
                 {
                     api.status = 200;
                     api.data = result;
@@ -93,16 +93,15 @@ namespace universidad.Controllers
                     api.status = 401;
                     api.data = null;
                     api.mensaje = "error en Usuario o contrasena";
-                    return Unauthorized(api); // 401 Unauthorized
+                    return StatusCode(401, api);
                 }
-        
             }
             catch (EstudianteException ex)
             {
                 api.status = 400;
                 api.data = null;
                 api.mensaje = "error en la solicitud"+ex.Message;
-                return BadRequest(api);
+                return StatusCode(400, api);
             }
             catch (Exception ex)
             {

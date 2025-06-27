@@ -1,0 +1,90 @@
+<div class="main-content">
+  <div class="nav-content">
+    <h2>Informacion del Estudiante</h2>
+  </div>
+
+  <div class="container-table">
+    <div class="title">
+      <h3>Mis Clases</h3>
+    </div>
+    @if(clases().length > 0) {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id Clase</th>
+          <th>Estudiante</th>
+          <th>Materia</th>
+          <th>Profesor</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (clase of clases();track clase.idClase) {
+        <tr>
+          <td>{{ clase.idClase }}</td>
+          <td>{{ clase.estudiante }}</td>
+          <td>{{ clase.materia }}</td>
+          <td>{{ clase.profesor }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+
+    }@else {
+    <div class="no-data">
+      <p class="red">No hay clases registradas...</p>
+    </div>
+    }
+  </div>
+
+   <div class="container-table table-dos">
+    <div class="title">
+      <h3>Estudiantes Con la misma asignatura</h3>
+    </div>
+    @if(estudiantesByclase().length > 0) {
+    <table class="table">
+      <thead>
+        <tr>
+
+          <th>Estudiante</th>
+          <th>Materia</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (estudiantes of estudiantesByclase();track estudiantes.id_clase) {
+        <tr>
+          <td>{{ estudiantes.estudiante }}</td>
+          <td>{{ estudiantes.materia }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+
+    }@else {
+    <div class="no-data">
+      <p class="red">No hay estudiantes en la misma asignatura</p>
+    </div>
+    }
+  </div>
+
+
+
+  <div class="container-estudiantes-clases">
+    <h4>Estudiantes Registrados</h4>
+    <div class="list" *ngFor="let est of estudiantes()">
+      <h5>{{ est.estudiante | titlecase }}</h5>
+      <ul>
+        <li *ngFor="let clase of est.clases">
+          Materia : {{ clase.materia }} Profesor : ({{ clase.profesor }})
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="triangulo2"></div>
+
+
+
+</div>
+
+

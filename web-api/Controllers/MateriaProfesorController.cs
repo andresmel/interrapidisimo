@@ -18,7 +18,7 @@ namespace universidad.Controllers
             this._imateriaProfesorService = imateriaProfesorService;
         }
 
-        [HttpGet("MateriaProfesores")]
+        [HttpGet("materiaProfesores")]
         public async Task<IActionResult> GetMateriasProfesores()
         {
             responseApi api = new responseApi();
@@ -46,7 +46,7 @@ namespace universidad.Controllers
                 api.status = 400;
                 api.data = null;
                 api.mensaje = "error en la solicitud" + ex.Message;
-                return BadRequest(api);
+                return StatusCode(400, api);
             }
             catch (Exception ex)
             {
