@@ -5,13 +5,13 @@ no se puede inscriobir mas de 3 asignaturas. no puede ver clases con el mismo pr
 que estan en las misma materias o asignaturas.
 
 # Tecnologias
-.NET6
-Entity Framework  Core
-Mysql
-swagger en desarrollo e insomnia
-Angular 18
-node 22.12.0
-Boostrap CDN
+.NET6,
+Entity Framework  Core,
+Mysql,
+swagger en desarrollo e insomnia,
+Angular 18,
+node 22.12.0,
+Boostrap CDN,
 
 
 #configuracion
