@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .navigation {
-  height: 70px;
-  background: #262626;
+  height: 72px;
+  background: #020202;
   position: absolute;
   width: 100%;
   top: 0%;
@@ -11,7 +11,7 @@
 .brand {
   position: absolute;
   padding-left: 20px;
-  float: left;
+  left: 0;
   line-height: 70px;
   text-transform: uppercase;
   font-size: 1.4em;
@@ -44,13 +44,13 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
+  background: #000000;
   color: #ffffff;
   text-decoration: none;
 }
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: #2581dc;
+  background: #000000;
   color: #ffffff;
 }
 nav ul li a:not(:only-child):after,
@@ -171,3 +171,9 @@ article {
     outline: none;
     border: none;
 }
+
+.btn-pos:hover{
+  background-color: dodgerblue;
+}
+
+

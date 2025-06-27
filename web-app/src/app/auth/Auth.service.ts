@@ -18,4 +18,7 @@ export class AuthService {
   postEstudiante(data: any): Observable<any> {
     return this._httpclien.post(api.apiUrl+api.registerUrl,data);
   }
+
+
+
 }

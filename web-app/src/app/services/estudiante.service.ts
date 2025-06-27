@@ -13,5 +13,13 @@ export class EstudianteService {
   getClases(id:number):Observable<any> {
     return this._http.get<any[]>(api.apiUrl+api.clasesUrl+`?id=${id}`);
   }
- 
+
+
+  getCLasesEstudiantes(id:number):Observable<any> {
+    return this._http.get<any[]>(api.apiUrl+api.getCLasesEstudiantesUrl+`?id=${id}`);
+  }
+
+  getEstudiantesByClase(id:number):Observable<any>{
+    return this._http.get(api.apiUrl+api.getEstudiantesByClaseUrl+`?id=${id}`)
+  }
 }

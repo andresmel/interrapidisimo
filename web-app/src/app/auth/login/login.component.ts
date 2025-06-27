@@ -1,15 +1,17 @@
+
 import { Component, inject } from '@angular/core';
 import { FormControl, Validators, FormBuilder as fb, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../Auth.service';
 import { Router } from '@angular/router';
 import { authStore } from '../../store/auth-store';
+import { HeaderAuthComponent } from './../shared/header-auth/header-auth.component';
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,HeaderAuthComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -40,7 +42,7 @@ export class LoginComponent {
         },
         error: (error) => {
           alert('Error al iniciar sesión: ' + error.error?.mensaje);
-         
+          console.log(error)
         }
       }); // <-- CIERRE CORRECTO DE subscribe
     } else {

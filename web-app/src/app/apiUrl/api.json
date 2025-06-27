@@ -4,5 +4,7 @@
     "registerUrl": "PostEstudiantes",
     "clasesUrl": "getClases",
     "postClaseUrl": "postClase",
-    "getMateriasUrl": "MateriaProfesores"
+    "getMateriasUrl": "MateriaProfesores",
+    "getCLasesEstudiantesUrl":"getCLasesEstudiantes",
+    "getEstudiantesByClaseUrl":"getEstudiantesByClase"
 }

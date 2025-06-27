@@ -59,7 +59,7 @@ label, p {
     margin-bottom: 5px;
     color: #777;
     letter-spacing: 0.5px;
-  
+
 }
 
 input, textarea {
@@ -79,21 +79,26 @@ input, textarea {
   font-size: 3.444rem;
   color:#1d3247;
   text-align: center;
-  
+
 }
 
 .btn{
-  background-color:#2ECC71;
-  padding: 10px;
+  background-color:#e98410;
+  padding: 2px;
   margin: 20px;
   position: relative;
   color: #FFF;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
+  width: 100%;
+  left: -5%;
 }
 
 .btn:hover {
-  box-shadow: 0 5px 22px 0 rgba(0,0,0,.25); 
+  box-shadow: 0 5px 22px 0 rgba(0,0,0,.25);
   transition: all .2s ease-in-out;
 
 }
+
+
+

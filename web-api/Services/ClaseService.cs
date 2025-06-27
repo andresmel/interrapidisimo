@@ -34,5 +34,29 @@ namespace universidad.Services
                 throw new ClasesException($"Error A listar clases: {ex.Message}", ex);
             }
         }
+
+        public async Task<ICollection<ClaseDto>> GetClasesDiferentById(int id)
+        {
+            try
+            {
+                return await this._iclaseRepository.GetClasesDiferentById(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ClasesException($"Error al listar clases diferentes: {ex.Message}", ex);
+            }
+        }
+
+        public async Task<ICollection<claseMaDto>> GetClasesByIdAndMateria(int id)
+        {
+            try
+            {
+                return await this._iclaseRepository.GetClasesByIdAndMateria(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ClasesException($"Error al listar clases por materia: {ex.Message}", ex);
+            }
+        }
     }
 }

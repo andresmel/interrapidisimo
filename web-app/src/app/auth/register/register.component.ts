@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../Auth.service';
 import { Router } from '@angular/router';
 import { authStore } from '../../store/auth-store';
+import { HeaderAuthComponent } from '../shared/header-auth/header-auth.component';
+
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,HeaderAuthComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
@@ -37,7 +39,7 @@ private fb = inject(fb);
         },
         error: (error) => {
           alert('Error al registrar usuario: ' + error.error?.mensaje);
-         
+
         }
       }); // <-- CIERRE CORRECTO DE subscribe
     } else {

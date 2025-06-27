@@ -10,6 +10,10 @@ export class MateriaService {
 
 
   getMaterias():Observable<any> {
-    return this._http.get(api.apiUrl+api.getMateriasUrl); 
+    return this._http.get(api.apiUrl+api.getMateriasUrl);
+  }
+
+  postMateria(data:any):Observable<any>{
+    return this._http.post(api.apiUrl+api.postClaseUrl,data)
   }
 }

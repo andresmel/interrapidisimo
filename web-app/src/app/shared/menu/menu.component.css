@@ -1,11 +1,10 @@
 /* estudiante.component.css */
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 75px;
   left: 0;
   height: 100vh;
-  width: 200px;
-  background-color: #efeff0;
+  width: 50px;
   overflow: hidden;
   transition: width 0.3s ease;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* ✅ sombra leve */
@@ -14,14 +13,38 @@
   align-items: flex-start;
   padding-top: 1rem;
   z-index: 1000;
+  background-color: white;
+  text-align: center;
 }
 
-.sidebar:hover {
-  width: 200px; /* ✅ se expande al hacer hover */
+.sidebar > .menu-btn{
+  opacity: 0;
+
+}
+.sidebar > h4{
+  opacity: 0;
+}
+
+.sidebar:hover > h4{
+  opacity: 1;
+}
+
+.sidebar:hover > .menu-btn{
+  opacity: 1;
+}
+
+.sidebar:hover{
+     width: 200px; /* ✅ se expande al hacer hover */
+}
+
+h4{
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 .menu-btn {
-  background: none;
+
   border: none;
   color: rgb(51, 51, 51);
   padding: 1rem;
@@ -38,4 +61,27 @@
   background-color: #829eb9;
   color: white;
   opacity: 1 !important;
+}
+
+
+.triangulo {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #2c3e50; /* mismo color del sidebar */
+
+  position: absolute;
+  left: 50px; /* pegado al borde derecho del sidebar */
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+
+
+.sidebar:hover + .triangulo{
+  position: absolute;
+  left: 200px;
+  transition: 0.3s;
 }
